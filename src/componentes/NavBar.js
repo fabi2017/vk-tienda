@@ -1,10 +1,10 @@
 
 import React from 'react';
 import Link from '@mui/material/Link';
+import CartWidget from './CartWidget'
 import { lightBlue } from '@mui/material/colors';
 
 const color = lightBlue[100];
-
 
 
 function NavBar() {
@@ -12,7 +12,6 @@ function NavBar() {
       <header className="App-header">
           <div>
               <img className="imgLogo" src = "logo2.png"/>
-
           </div>
 
           <ul className='navBar'>          
@@ -20,6 +19,9 @@ function NavBar() {
             <Link href="#" underline="hover" sx={{ p: 2 , fontSize: 'h6.fontSize', fontWeight: 'medium', color}} >{'Productos'}</Link>
             <Link href="#" underline="hover" sx={{ p: 2 , fontSize: 'h6.fontSize', fontWeight: 'medium', color }} >{'Nosotros'}</Link>
             <Link href="#" underline="hover" sx={{ p: 2 , fontSize: 'h6.fontSize', fontWeight: 'medium',color }}  >{'Contacto'}</Link>
+            <Link href="#">
+               <CartWidget/>
+            </Link>
           </ul>
       
       </header>

@@ -9,7 +9,7 @@
   padding: 5px 30px;
   display: flex;
   justify-content: space-between;
-  background-color: #424242  ;
+  background-color: #212121  ;
   ;
 }
 
@@ -23,9 +23,33 @@
 .imgLogo{
   width: 120px;
 }
+.containerItem{
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .5);;
+  margin: 20px 50px ;
+  display: flex;
+  justify-content: center;
+}
 
 
-/* 
-.navBar>Link{
-  margin: 20px;
-} */
+.cardProd{
+  border: red 2px solid;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 200px;
+  text-align: center;
+
+}
+
+.icon-carrito{
+  
+  width: 50px; 
+  margin-bottom: 12px;
+  margin-left: 15px;
+  
+}
+
+span {
+  font-size: 20px;
+  font-style: italic;
+}
