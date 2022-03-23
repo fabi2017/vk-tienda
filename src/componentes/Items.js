@@ -1,11 +1,15 @@
 
-function Items ({titulo,talle,precio}){
+
+import ItemCount from "./ItemCount"
+
+function Items ({titulo,tamaño,precio}){  
     return(
+        
         <div className="cardProd">
             <h2>{titulo} </h2>
-            <p>Talle: {talle} </p>
-            <p>Precio: {precio} </p>
-            <button>Comprar</button>
+            <p>Tamaño: {tamaño} </p>
+            <p>Precio: {precio} </p>            
+           <ItemCount stock="10" initial="1"/> 
         </div>
     );
 }

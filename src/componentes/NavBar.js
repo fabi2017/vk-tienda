@@ -22,10 +22,8 @@ function NavBar() {
             <Link href="#">
                <CartWidget/>
             </Link>
-          </ul>
-      
-      </header>
-      
+          </ul>      
+      </header>      
     );
 }
 
