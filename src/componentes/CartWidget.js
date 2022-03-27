@@ -1,8 +1,8 @@
 
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { lightBlue } from '@mui/material/colors';
-const color = lightBlue[100];
+import { grey } from '@mui/material/colors';
+const color = grey[300];
 
 function CartWidget (){
     return(

@@ -5,10 +5,9 @@ import ItemListContainer from "./componentes/ItemListContainer";
 function App() {
   return (
     <div className="app">
-      <NavBar />
-        <ItemListContainer>
-          <p>Productos Destacados</p>          
-        </ItemListContainer>     
+       <NavBar />
+       <h2 className="tituloList" >Productos en Promocion</h2>
+       <ItemListContainer />
     </div>
   );
 }

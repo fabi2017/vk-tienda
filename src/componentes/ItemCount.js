@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Button from '@mui/material/Button';
 import DoNotDisturbOnTwoToneIcon from "@mui/icons-material/DoNotDisturbOnTwoTone";
 import AddCircleTwoToneIcon from "@mui/icons-material/AddCircleTwoTone";
 
@@ -11,29 +11,27 @@ function ItemCount({ stock, initial, onAdd }) {
       setContador(contador + 1);
     }
   };
-
-  onAdd = () => {
-    alert(`Usted agrego ${contador} unidades al carrito`);
-  };
-
-  const rmvStock = () => {
+   const rmvStock = () => {
     if (contador > initial) {
       setContador(contador - 1);
     }
   };
 
+  onAdd = () => {
+    alert(`Usted agrego ${contador} unidades al carrito`);
+  };
   return (
     <>
       <div className="item-detail">
-        <button className="btn" onClick={rmvStock}>
-          <DoNotDisturbOnTwoToneIcon />
+        <button className="btnProd" onClick={rmvStock} disabled = { contador <= initial ? true:null} >
+          <DoNotDisturbOnTwoToneIcon sx={{ fontSize: 30 }} />
         </button>
         <p>{contador}</p>
-        <button className="btn" onClick={addStock}>
-          <AddCircleTwoToneIcon />
-        </button>
+        <button className="btnProd" onClick={addStock} disabled = { contador >= stock ? true:null} >
+          <AddCircleTwoToneIcon sx={{ fontSize: 30 }}/>
+       </button>
       </div>
-      <button onClick={onAdd}>Agregar al carrito</button>
+     <Button variant="outlined" size="small" color="error" onClick={onAdd}>Agregar al carrito</Button> 
     </>
   );
 }
