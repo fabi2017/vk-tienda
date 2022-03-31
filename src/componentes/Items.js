@@ -1,19 +1,21 @@
-import ItemCount from "./ItemCount";
+
 
 function Items({ datProd }) {
-  const { titulo, tamaño, precio, stock, imagen } = datProd;
-
+  const {titulo, precio, imagen, descripcion } = datProd;
+  
   return (
     <div className="cardProd">
       <div className="imagenProd">
         <img src={`./${imagen}`} alt="" />
       </div>
       <h2>{titulo} </h2>
-      <p>Tamaño: {tamaño} </p>
-      <p>Precio: {precio} </p>
-      <ItemCount stock={stock} initial="1" />
+      <p>Precio:$ {precio} </p>    
+      <p>{descripcion}</p>     
     </div>
   );
-}
+} 
+
 
 export default Items;
+
+

@@ -39,6 +39,18 @@
   display: inline-block;
   margin: 20px 40px 20px 20px;
   width: 200px;
+  height: 400px;
+  text-align: center;
+
+
+} 
+
+
+.itemProd{
+  border: red 2px solid;
+  display: inline-block;
+  margin: 20px 40px 20px 20px;
+  width: 200px;
   height: 450px;
   text-align: center;
 
