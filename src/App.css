@@ -20,6 +20,36 @@
   margin-right: 50px;
 }
 
+
+.navBar>li>Button{
+  margin-left: 15px ;
+  
+}
+
+
+.navBar>li>Button>a{
+   color: rgb(3, 217, 217);
+   text-decoration: none;
+}
+
+#basic-button{
+  color: rgb(3, 217, 217);
+  margin-left: 15px ;
+}
+
+#basic-button>a{
+  color: rgb(3, 217, 217);
+  text-decoration: none;
+}
+
+
+.icon-carrito{
+  
+  margin-top: 20px;
+  
+}
+
+
 .imgLogo{
   width: 120px;
 }
@@ -31,13 +61,15 @@
     align-items: center;
     align-content: center;
     justify-content: center;
+    flex-wrap:wrap;
+    padding: 10px;
 }
 
 
  .cardProd{
   border: red 2px solid;
   display: inline-block;
-  margin: 20px 40px 20px 20px;
+  margin: 20px ;
   width: 200px;
   height: 400px;
   text-align: center;
@@ -45,17 +77,34 @@
 
 } 
 
+.linkMenu {
+  text-decoration: none;
+  color: #212121;
+}
+
 
 .itemProd{
-  border: red 2px solid;
-  display: inline-block;
-  margin: 20px 40px 20px 20px;
-  width: 200px;
-  height: 450px;
+ 
   text-align: center;
-
-
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
 } 
+
+
+.imagenItem{  
+  height: 350px;
+  margin: 0 10px;
+}
+
+.imagenItem>img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
 
 .imagenProd{  
   height: 200px;
@@ -68,13 +117,6 @@
   object-fit: contain;
 }
 
-.icon-carrito{
-  
-  width: 50px; 
-  margin-bottom: 12px;
-  margin-left: 15px;
-  
-}
 
 span {
   font-size: 20px;
@@ -97,11 +139,43 @@ span {
   border-radius: 30px;
   background-color: transparent;
   border: none;
-  margin-top: 5px;
+  margin: 0 15px;
 }
 
 
 .tituloList { 
   text-align: center;
+  text-decoration: underline;
   
+}
+
+.subtitulo { 
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+  
+}
+
+.contConstruction{ 
+   margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.infoProd {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoProd>a {
+  text-decoration: none;
+}
+
+
+
+.infoItem{
+    background-color: rgba(128, 128, 128, 0.159);
+    margin: 0 10px;
+    
 }

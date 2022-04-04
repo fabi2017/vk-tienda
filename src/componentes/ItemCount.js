@@ -17,9 +17,13 @@ function ItemCount({ stock, initial, onAdd }) {
     }
   };
 
+
+  
   onAdd = () => {
-    alert(`Usted agrego ${contador} unidades al carrito`);
+    alert(`Usted agrego ${contador} unidades al carrito`); 
   };
+
+
   return (
     <>
       <div className="item-detail">

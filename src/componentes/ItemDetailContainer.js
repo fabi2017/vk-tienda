@@ -32,9 +32,9 @@ function ItemDetailContainer({ id }) {
 ///-------------------------------------------------------------------///
 
   return (
-    <div className="containerItem">
+    <div className="containerItem">     
       {productos ? (
-        <ItemDetail datProd2={productos} key={productos.id} />
+        <ItemDetail key={productos.id} />
       ) : (
         <CircularProgress color="success" />
       )}

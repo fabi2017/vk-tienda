@@ -1,21 +1,48 @@
 
 import ItemCount from "./ItemCount";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import listaProductos from "../utilidades/listaProductos";
 
-function ItemDetail({ datProd2 }) {
-    const { titulo, tamaño, precio, stock, imagen } = datProd2;
+
+function ItemDetail() {
+
+  const { id} = useParams();
+  const [productos, setProductos] = useState([]);
   
-    return (
-      <div className="itemProd">
-        <div className="imagenProd">
-          <img src={`./${imagen}`} alt="" />
+
+  useEffect(() => {
+    productoById(id, listaProductos);   
+  }, [id]);
+
+  const productoById = () => {
+    return listaProductos.map((productos) => {
+      if (productos.id === Number(id)) {
+        return setProductos(productos);
+      }
+    });
+  };
+
+
+  return (
+        <div className ="containerItem">          
+          <div className="itemProd">
+              <div className="imagenItem">
+                  <img src={`../${productos.imagen}`} alt="" />
+              </div>
+              <h2>{productos.titulo} </h2>
+              <div className="infoItem">                
+                <p>Precio:$ {productos.precio} </p>
+                <p>Medidas: {productos.tamaño} </p>
+                <p>{productos.descripcion}</p> 
+              </div>
+              <ItemCount stock={productos.stock} initial="1" />
+          </div>
         </div>
-        <h2>{titulo} </h2>
-        <p>Tamaño: {tamaño} </p>
-        <p>Precio:$ {precio} </p>
-        <ItemCount stock={stock} initial="1" />
-      </div>
-    );
-  }
+   
+  );
+}
+
 
 
 export default ItemDetail;
