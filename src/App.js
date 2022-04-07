@@ -5,7 +5,8 @@ import Nosotros from "./secciones/Nosotros";
 import Contacto from "./secciones/Contacto";
 import Home from "./secciones/Home";
 import ItemListContainer from "./componentes/ItemListContainer";
-import ItemDetail from "./componentes/ItemDetail";
+import  ItemDetailContainer from "./componentes/ItemDetailContainer"
+import Carrito from "./secciones/Carrito"
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/categoria/:categoria" element={<ItemListContainer/>} />
-          <Route path="/:item/:id" element={<ItemDetail/>} />
+          <Route path="/:item/:id" element={<ItemDetailContainer/>} />
           <Route path="/nosotros" element={<Nosotros/>} />
           <Route path="/contacto" element={<Contacto/>} />
+          <Route path="/cart" element={<Carrito/>} />
           <Route path="*" element={<h1 className="tituloList">Error 404</h1>} />
         </Routes>
       </BrowserRouter>

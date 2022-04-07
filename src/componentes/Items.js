@@ -1,8 +1,14 @@
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Items({ datProd }) {
   const {titulo, precio, imagen, id} = datProd;
+
+  const navigate = useNavigate()
+  
+  const verMas = () =>{
+    navigate(`/${titulo}/${id}`)
+  }
 
   
   return (
@@ -13,7 +19,7 @@ function Items({ datProd }) {
       <h3>{titulo} </h3>
       <div className='infoProd' >     
         <p>Precio:$ {precio} </p>
-        <Link to={`/${titulo}/${id}`}><Button variant="outlined" size="small" color="error" >Ver mas</Button></Link>
+        <Button variant="outlined" size="small" color="error" onClick={verMas}>Ver mas</Button>        
       </div>
     </div>
   );

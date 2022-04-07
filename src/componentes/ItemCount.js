@@ -3,7 +3,8 @@ import Button from '@mui/material/Button';
 import DoNotDisturbOnTwoToneIcon from "@mui/icons-material/DoNotDisturbOnTwoTone";
 import AddCircleTwoToneIcon from "@mui/icons-material/AddCircleTwoTone";
 
-function ItemCount({ stock, initial, onAdd }) {
+
+function ItemCount({ stock, initial,action,btn}) {
   const [contador, setContador] = useState(1);
 
   const addStock = () => {
@@ -13,14 +14,8 @@ function ItemCount({ stock, initial, onAdd }) {
   };
    const rmvStock = () => {
     if (contador > initial) {
-      setContador(contador - 1);
+      setContador(contador - 1);     
     }
-  };
-
-
-  
-  onAdd = () => {
-    alert(`Usted agrego ${contador} unidades al carrito`); 
   };
 
 
@@ -34,8 +29,10 @@ function ItemCount({ stock, initial, onAdd }) {
         <button className="btnProd" onClick={addStock} disabled = { contador >= stock ? true:null} >
           <AddCircleTwoToneIcon sx={{ fontSize: 30 }}/>
        </button>
-      </div>
-     <Button variant="outlined" size="small" color="error" onClick={onAdd}>Agregar al carrito</Button> 
+      </div>  
+      <div> 
+       <Button sx={{ m: 2}} variant="outlined" size="small" color="error" disabled={btn} onClick={(e) => action(e, contador)}>Agregar al carrito</Button>     
+     </div>
     </>
   );
 }

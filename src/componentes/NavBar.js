@@ -8,8 +8,8 @@ import MenuItem from '@mui/material/MenuItem';
 
 
 
-function NavBar() {
 
+function NavBar() {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -38,7 +38,7 @@ function NavBar() {
                </Menu>
               <li><Button variant="outlined" color="error"  sx={{ mb: 1}}><Link to= {'/nosotros'}>Nosotros</Link></Button></li>
               <li><Button variant="outlined" color="error"  sx={{ mb: 1}}><Link to= {'/contacto'}>Contacto</Link></Button></li>
-              <li><Button><Link to= {'*'}><CartWidget/></Link></Button></li>
+              <li><Button><Link to= {'/cart'}><CartWidget/></Link></Button></li>
            </ul>      
       </header>      
     );
