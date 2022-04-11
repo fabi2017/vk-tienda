@@ -1,10 +1,11 @@
+import "../estilos/ItemCount.css"
 import React, { useState } from "react";
 import Button from '@mui/material/Button';
 import DoNotDisturbOnTwoToneIcon from "@mui/icons-material/DoNotDisturbOnTwoTone";
 import AddCircleTwoToneIcon from "@mui/icons-material/AddCircleTwoTone";
 
 
-function ItemCount({ stock, initial,action,btn}) {
+function ItemCount({ stock, initial,action,btnAdd}) {
   const [contador, setContador] = useState(1);
 
   const addStock = () => {
@@ -17,21 +18,19 @@ function ItemCount({ stock, initial,action,btn}) {
       setContador(contador - 1);     
     }
   };
-
-
   return (
     <>
       <div className="item-detail">
-        <button className="btnProd" onClick={rmvStock} disabled = { contador <= initial ? true:null} >
-          <DoNotDisturbOnTwoToneIcon sx={{ fontSize: 30 }} />
-        </button>
-        <p>{contador}</p>
-        <button className="btnProd" onClick={addStock} disabled = { contador >= stock ? true:null} >
-          <AddCircleTwoToneIcon sx={{ fontSize: 30 }}/>
-       </button>
+          <button className="btnProd" onClick={rmvStock} disabled = { contador <= initial ? true:null} >
+            <DoNotDisturbOnTwoToneIcon sx={{ fontSize: 30 }} />
+          </button>
+          <p>{contador}</p>
+          <button className="btnProd" onClick={addStock} disabled = { contador >= stock ? true:null} >
+            <AddCircleTwoToneIcon sx={{ fontSize: 30 }}/>
+          </button>
       </div>  
       <div> 
-       <Button sx={{ m: 2}} variant="outlined" size="small" color="error" disabled={btn} onClick={(e) => action(e, contador)}>Agregar al carrito</Button>     
+       <Button sx={{ m: 2}} variant="outlined" size="small" color="error" disabled={btnAdd} onClick={(e) => action(e, contador)}>Agregar al carrito</Button>     
      </div>
     </>
   );

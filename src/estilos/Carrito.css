@@ -1,0 +1,46 @@
+
+
+
+.containerCart{
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
+   margin: 40px 50px;
+   
+  }
+
+  .itemCart{
+ 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 50%);
+  } 
+
+
+  .itemCart>span>p{
+    font-weight: bold;
+  }
+  
+  .imagenItem2{  
+    height: 150px;
+    margin: 0 10px;
+  }
+  
+  
+  .imagenItem2>img{
+    width: 90%;
+    height: 90%;
+    object-fit: scale-down;
+  }
+
+  .infoItem2{   
+    margin: 0 10px;   
+ }
+  
+
+  .contCantidad{
+    display: flex;
+    flex-direction: column;
+  }
+  

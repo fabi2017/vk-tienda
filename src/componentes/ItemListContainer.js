@@ -1,10 +1,8 @@
-
-
 import ItemList from "./ItemList"
 
 function ItemListContainer (){
     return(        
-        <div className ="containerItem">
+        <div className ="containerProd">
          <ItemList/>        
         </div>
     )    

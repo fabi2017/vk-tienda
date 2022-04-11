@@ -22,7 +22,6 @@ function ItemList() {
         categoria ? productoByCategoria(categoria, listaProductos) : setProductos(datos)
     })
     }, [categoria])
-
   
   const productoByCategoria = (categoria, listaProductos) => {
     return listaProductos.map((item) => {
@@ -32,8 +31,7 @@ function ItemList() {
     });
   };
  
-
-  return productos.length ? (
+  return  productos.length ? (
     productos.map((producto) => {
       return <Items datProd={producto} key={producto.id} />;
     })

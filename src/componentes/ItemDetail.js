@@ -1,15 +1,27 @@
+
+import "../estilos/ItemDetails.css"
 import ItemCount from "./ItemCount";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Button from '@mui/material/Button';
 import listaProductos from "../utilidades/listaProductos";
 import { useNavigate } from "react-router-dom";
+import CartContext from  '../context/CartContext';
+
 
 function ItemDetail() {
   const { id } = useParams();
   const [productos, setProductos] = useState([]);
+  const { cartProductos,addProductos} = useContext(CartContext)  
+  const {titulo, precio, imagen, descripcion,tamaño,categoria} = productos; 
 
-  useEffect(() => {
+  const [btnAddCart, setBtnCart] = useState(false);
+  const [btnCarrito, setBtnCarrito] = useState(true);
+
+  const navigate = useNavigate()        
+
+
+  useEffect(() => {   
     productoById(id, listaProductos);
   }, [id]);
 
@@ -19,40 +31,39 @@ function ItemDetail() {
         return setProductos(productos);
       }
     });
-  };    
-     
-      const [btnAddCart, setAddCart] = useState(false);
-      const [btnComprar, setComprar] = useState(true);
-    
+  };       
 
-      const onAdd = (e, contador) => {        
-        alert(`Usted agrego ${contador} unidades al carrito`);     
-        setAddCart(true)
-        setComprar(false)     
-      };
+   const onAdd = (e, contador) => {           
+       setBtnCart(true) 
+       setBtnCarrito(false)            
+       addProductos(productos,contador) 
+       console.log("productos agregados: ", cartProductos)    
+   }
 
-       
-      const navigate = useNavigate()        
-      const pageCart = () =>{
+
+   const pageCart = () =>{
           navigate(`/cart`)
-       }
-
-
-       
-
+    }
+  const pageCategoria = () =>{
+        navigate(`/categoria/${categoria}`)
+    }
+   
   return (
     <div className="itemProd">
       <div className="imagenItem">
-        <img src={`../${productos.imagen}`} alt="" />
+        <img src={`../${imagen}`} alt="" />
       </div>
-      <h2>{productos.titulo} </h2>
+      <h2>{titulo} </h2>
       <div className="infoItem">
-        <p>Precio:$ {productos.precio} </p>
-        <p>Medidas: {productos.tamaño} </p>
-        <p>{productos.descripcion}</p>
+        <p>Precio:$ {precio} </p>
+        <p>Medidas: {tamaño} </p>
+        <p>{descripcion}</p>          
       </div>
-      <ItemCount stock={productos.stock} initial="1" action={onAdd} btn={btnAddCart}/>
-      <Button sx={{ m: 2 ,  p: 1 }} variant="outlined" size="small" color="error" disabled={btnComprar} onClick={pageCart} >Comprar</Button>
+      <div>
+        <Button sx={{ m: 2 ,  p: 1 }} variant="outlined" size="small" color="error" onClick={pageCategoria}>Volver a productos</Button>
+        <ItemCount stock={productos.stock} initial="1" action={onAdd} btnAdd={btnAddCart}/>
+        <Button sx={{ m: 2 ,  p: 1 }} variant="outlined" size="small" color="error" disabled={btnCarrito} onClick={pageCart}>Ir al Carrito</Button>        
+      </div>      
     </div>
   );
 }

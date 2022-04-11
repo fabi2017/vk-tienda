@@ -1,0 +1,24 @@
+
+.icon-carrito{  
+    margin-top: 20px;
+    display: flex;  
+  }
+  
+  .icon-carrito>p{  
+    font-weight: bold; 
+    
+  }
+  
+  .svgShoop{
+    
+    color: rgb(245, 69, 69);
+   
+    
+  }
+  
+  .svgShoop.dark-mode{
+    
+    color: whitesmoke;
+    
+  }
+  

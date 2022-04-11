@@ -10,6 +10,7 @@
     imagen: "funkoXmen.jpg", 
     descripcion: "Funko de Logan de Xmen",
     categoria: "marvel",
+    
 },
 {
     id: 2,
@@ -20,6 +21,7 @@
     imagen: "llavero.jpg",
     descripcion: "Llavero metalizado del guantelete del infito, pieza de collecion",
     categoria: "marvel",
+    
 },    
 
 {
@@ -31,28 +33,31 @@
     imagen: "mochila.jpg",
     descripcion: "Mochila camuflada reforzada en cordura con bolsillo interno y lateral en red, Altura x Ancho x Profundidad: 43 cm x 33 cm x 10 cm",
     categoria: "marvel",
+    
 },    
 
 {
     id: 4,
-    titulo: "Set Matero Harry Potter",
+    titulo: "Set Matero HP",
     tamaño: "30cm",
     precio: 5200,
     stock: 8,
     imagen: "setHp.jpg",
     descripcion: "Kit Matero, Azucar (Sombrero Seleccionador) y Yerba (Caldero), edicion limitada",
     categoria: "harrypoter",
+    
 },    
 
 {
     id: 5,
-    titulo: "Cajita musical Snitch",
+    titulo: "Cajita Musical Snitch",
     tamaño: "10 cm x 8 cm x 6 cm",
     precio: 4800,
     stock: 4,
     imagen: "cajita.jpg",
     descripcion: "Cajita Musical a manivela con la melodía de Harry Potter 'Hedwig's Theme' + Snitch colgante",
     categoria: "harrypoter",
+    
 },    
 
 {
@@ -64,6 +69,7 @@
     imagen: "varita.jpg",
     descripcion: "Varita  con caja de cartón con sello metalizado de autenticidad, interior acolchado recubierto con tul para su protección",
     categoria: "harrypoter",
+    
 },    
 
 {
@@ -75,6 +81,7 @@
     imagen: "funkoMando.jpg",
     descripcion: "Funko the Mandalorian ",
     categoria: "starwars",
+    
 },    
 {
     id: 8,
@@ -85,17 +92,19 @@
     imagen: "taza.jpg",
     descripcion: "Taza Soldado Imperial Stormtrooper,posee manija para sujetación de ceramica",
     categoria: "starwars",
+    
 },    
 
 {
     id: 9,
-    titulo: "Muñecos C3PO y R2-D2",
+    titulo: "Muñecos C3PO,R2-D2",
     tamaño: "16 cm y 8 cm",
     precio: 5400,
     stock: 6,
     imagen: "muñecos.jpg",
     descripcion: "Set contiene a c-3po electronico se le iluminan los ojos con apretar su pecho, y r2-d2 incluye herramientas removibles",
     categoria: "starwars",
+    
 },    
 
 

@@ -1,0 +1,56 @@
+import { createContext, useState } from "react";
+
+//se crea el contexto
+const CartContext = createContext();
+
+//se crea el  componente proveedor para el contexto
+const CartProvider = ({ children }) => {
+  //se crea estados para el tema
+  const [cartProductos, setCartProductos] = useState([]);
+
+  const addProductos = (productos, contador) => {
+    /*  productos.quanty = contador; 
+        let prodLoad = cartProductos.find(cartProducto => cartProducto.id == productos.id)   
+        !prodLoad && setCartProductos(cartProductos => [...cartProductos, productos])   */
+    productos.quanty = contador;
+    if (cartProductos.find((el) => el.id === productos.id)) {
+      let index = cartProductos.findIndex((el) => el.id === productos.id);
+      let producto = cartProductos[index];
+      producto.quanty = producto.quanty + contador;
+
+      const nuevoCarrito = [...cartProductos];
+      nuevoCarrito.splice(index, 1, producto);
+      setCartProductos([...nuevoCarrito]);
+
+    } else {
+      let producto = { ...productos, contador };
+      setCartProductos((cartProductos) => [...cartProductos, producto]);
+    }
+
+  };
+  
+  const calculeTotalPrice = () => {
+    let total = 0;
+    cartProductos.map((producto) => {
+      total = producto.precio + total;
+      console.log("funcion desde context", total);
+    });
+    return total;
+  };
+
+  // valores a pasar en el contexto
+  const data = {
+    cartProductos,
+    addProductos,
+    calculeTotalPrice,
+  };
+
+  return (
+    // funciones que van a ir dentro del componente
+    <CartContext.Provider value={data}>{children}</CartContext.Provider>
+    // "children" es para que vayan todos los componentes a utilizar
+  );
+};
+
+export { CartProvider };
+export default CartContext;

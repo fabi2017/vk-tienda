@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import listaProductos from "../utilidades/listaProductos";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -16,7 +17,7 @@ function ItemDetailContainer() {
   const getItems = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(listaProductos);
-    }, 2000);
+    }, 1500);
   });
 
   useEffect(() => {
@@ -31,8 +32,6 @@ function ItemDetailContainer() {
       console.log(error);
     }
   } 
-
-
 
   return (
     <div className ="containerItem">     
