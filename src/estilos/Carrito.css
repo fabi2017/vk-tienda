@@ -44,3 +44,24 @@
     flex-direction: column;
   }
   
+  .contCompra{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .contCompra>p>span{
+    font-weight: bold;
+  }
+
+  .contVacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.btnChange{
+  margin: 0;
+  padding: 0;
+}  

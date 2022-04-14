@@ -8,9 +8,13 @@ import MenuItem from '@mui/material/MenuItem';
 import { useContext } from 'react';
 import ThemeContext from '../context/ThemeContext';
 import SwitchTheme from './SwitchTheme';
+import CartContext from "../context/CartContext";
+
 
 
 function NavBar() {
+
+  const { cartProductos}= useContext(CartContext);
 
   const { darkTheme} = useContext(ThemeContext)
 
@@ -53,9 +57,12 @@ function NavBar() {
                     <MenuItem onClick={handleClose}><Link className="linkMenu" to= {'/categoria/marvel'}>Marvel</Link></MenuItem>
                     <MenuItem onClick={handleClose}><Link className="linkMenu" to= {'/categoria/harrypoter'}>Harry Potter</Link></MenuItem>
                </Menu>
-              <li><Button variant="outlined" color="error"  sx={{ mb: 1}} onClick={pageNosotros} className={`btnNavBar ${darkTheme ? 'dark-mode' : '' }`}>Nosotros</Button></li>
-              <li><Button variant="outlined" color="error"  sx={{ mb: 1}} onClick={pageContacto} className={`btnNavBar ${darkTheme ? 'dark-mode' : '' }`} >Contacto</Button></li>           
-              <li><Button onClick={pageCart}><CartWidget/></Button></li>
+              <li><Button variant="outlined" color="error" sx={{ mb: 1}} onClick={pageNosotros} className={`btnNavBar ${darkTheme ? 'dark-mode' : '' }`}>Nosotros</Button></li>
+              <li><Button variant="outlined" color="error" sx={{ mb: 1}} onClick={pageContacto} className={`btnNavBar ${darkTheme ? 'dark-mode' : '' }`} >Contacto</Button></li>           
+              <li>
+              {(cartProductos.length >= 1) &&           
+                     (<Button onClick={pageCart}><CartWidget/></Button>) }
+              </li>
            </ul>      
       </header>      
     );

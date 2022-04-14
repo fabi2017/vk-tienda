@@ -41,7 +41,7 @@ function ItemDetail() {
    }
 
 
-   const pageCart = () =>{
+   const pageCarrito = () =>{
           navigate(`/cart`)
     }
   const pageCategoria = () =>{
@@ -62,7 +62,7 @@ function ItemDetail() {
       <div>
         <Button sx={{ m: 2 ,  p: 1 }} variant="outlined" size="small" color="error" onClick={pageCategoria}>Volver a productos</Button>
         <ItemCount stock={productos.stock} initial="1" action={onAdd} btnAdd={btnAddCart}/>
-        <Button sx={{ m: 2 ,  p: 1 }} variant="outlined" size="small" color="error" disabled={btnCarrito} onClick={pageCart}>Ir al Carrito</Button>        
+        <Button sx={{ m: 2 ,  p: 1 }} variant="outlined" size="small" color="error" disabled={btnCarrito} onClick={pageCarrito}>Ir al Carrito</Button>        
       </div>      
     </div>
   );

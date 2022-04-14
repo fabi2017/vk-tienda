@@ -1,6 +1,6 @@
 
 .icon-carrito{  
-    margin-top: 20px;
+    margin-top: 5px;
     display: flex;  
   }
   
@@ -10,9 +10,8 @@
   }
   
   .svgShoop{
-    
-    color: rgb(245, 69, 69);
-   
+    margin-top: 5px;
+    color: rgb(245, 69, 69); 
     
   }
   

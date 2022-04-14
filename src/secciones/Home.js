@@ -5,7 +5,7 @@ import ItemListContainer from "../componentes/ItemListContainer"
 function Home() {
     return(
         <div >
-        <h2 className="tituloList">Productos Destacados</h2> 
+        <h1 className="tituloList">Productos Destacados</h1> 
        <ItemListContainer/> 
       </div>
     )

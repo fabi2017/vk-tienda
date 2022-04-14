@@ -39,7 +39,7 @@ function ItemDetailContainer() {
         <ItemDetail key={productos.id} />
       ) : (
         <CircularProgress color="success" />
-      )}
+      )}      
     </div>
   );
 }

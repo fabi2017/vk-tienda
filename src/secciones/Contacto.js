@@ -1,5 +1,5 @@
 
-import UnderConstruction from "../componentes/UnderConstruction"
+import UnderConstruction from "../extra/UnderConstruction"
 
 function Contacto() {
     return(

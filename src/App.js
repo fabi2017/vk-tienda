@@ -9,6 +9,7 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer";
 import Carrito from "./secciones/Carrito";
 import { ThemeProvider } from "./context/ThemeContext";
 import { CartProvider } from "./context/CartContext"
+import Page404 from "./extra/Page404"
 
 
 
@@ -27,7 +28,7 @@ function App() {
               <Route path="/nosotros" element={<Nosotros />} />
               <Route path="/contacto" element={<Contacto />} />
               <Route path="/cart" element={<Carrito />} />
-              <Route path="*"element={<h1 className="tituloList">Error 404</h1>}/>
+              <Route path="*"element={<Page404/>} />
             </Routes>
           </BrowserRouter>
         </ThemeProvider>

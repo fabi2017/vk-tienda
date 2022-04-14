@@ -19,7 +19,7 @@
     precio: 800,
     stock: 10,
     imagen: "llavero.jpg",
-    descripcion: "Llavero metalizado del guantelete del infito, pieza de collecion",
+    descripcion: "Llavero metalizado del guantelete del infito, pieza de coleccion",
     categoria: "marvel",
     
 },    

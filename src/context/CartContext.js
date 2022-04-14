@@ -12,6 +12,7 @@ const CartProvider = ({ children }) => {
     /*  productos.quanty = contador; 
         let prodLoad = cartProductos.find(cartProducto => cartProducto.id == productos.id)   
         !prodLoad && setCartProductos(cartProductos => [...cartProductos, productos])   */
+
     productos.quanty = contador;
     if (cartProductos.find((el) => el.id === productos.id)) {
       let index = cartProductos.findIndex((el) => el.id === productos.id);
@@ -28,22 +29,35 @@ const CartProvider = ({ children }) => {
     }
 
   };
+
+  const eliminarProd = (id) => {
+    setCartProductos(cartProductos.filter(prod => prod.id !== id))
+  }
   
-  const calculeTotalPrice = () => {
-    let total = 0;
-    cartProductos.map((producto) => {
-      total = producto.precio + total;
-      console.log("funcion desde context", total);
-    });
-    return total;
+  const precioTotal = () => {   
+
+    return cartProductos.reduce((parcial, producto) => parcial = parcial + (producto.precio * producto.quanty), 0 )
   };
+
+
+  const limpiarCart = () =>{
+      setCartProductos([])
+  }
+
+
 
   // valores a pasar en el contexto
   const data = {
     cartProductos,
     addProductos,
-    calculeTotalPrice,
+    precioTotal,
+    limpiarCart,
+    eliminarProd,
   };
+
+
+
+
 
   return (
     // funciones que van a ir dentro del componente
