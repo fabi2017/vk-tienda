@@ -46,7 +46,7 @@ export default function CircularIntegration() {
     }
     setTimeout(() => {      
        limpiarCart()
-    }, 3500);
+    }, 4000);
   };
 
   return (
@@ -61,7 +61,7 @@ export default function CircularIntegration() {
           onClick={handleButtonClick}
           size="medium"          
         >
-         {success ? <p className="btnChange">Compra realizada</p> : <p className="vas">Finalizar compra</p>}
+         {success ? <p className="btnChange">Compra realizada</p> : <p className="btnChange">Finalizar compra</p>}
         </Button>
         {loading && (
           <CircularProgress

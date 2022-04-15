@@ -1,37 +1,43 @@
 import { useEffect, useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import Items from "./Items";
-import listaProductos from "../utilidades/listaProductos";
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
+import db from "../firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 function ItemList() {
-  const {categoria} = useParams()
+  const { categoria } = useParams();
   const [productos, setProductos] = useState([]);
 
-   const getProductos = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(listaProductos);
-      }, 1500);
+  const getProductos = async () => {
+    const itemCollec = collection(db, "dbProductos");
+    const productosSnap = await getDocs(itemCollec);
+    const prodLista = productosSnap.docs.map((doc) => {
+      let producto = doc.data();
+      producto.id = doc.id;     
+      return producto;
     });
-  }; 
+    return prodLista;
+  };
 
-   useEffect( () => {
-    setProductos([])
-    getProductos().then( (datos) => {
-        categoria ? productoByCategoria(categoria, listaProductos) : setProductos(datos)
-    })
-    }, [categoria])
-  
-  const productoByCategoria = (categoria, listaProductos) => {
-    return listaProductos.map((item) => {
-      if (item.categoria === ( categoria)) {
-        return setProductos(productos => [...productos, item]);
+  useEffect(() => {
+    setProductos([]);
+    getProductos().then((productos) => {     
+      categoria  ? productoByCategoria(categoria, productos)
+        : setProductos(productos);
+    });
+  }, [categoria]);
+
+  const productoByCategoria = (categoria, array) => {
+    return array.map((producto) => {
+      if (producto.categoria === categoria) {
+        console.log("map de: ", productos);
+        return setProductos((productos) => [...productos, producto]);
       }
     });
   };
- 
-  return  productos.length ? (
+
+  return productos.length ? (
     productos.map((producto) => {
       return <Items datProd={producto} key={producto.id} />;
     })

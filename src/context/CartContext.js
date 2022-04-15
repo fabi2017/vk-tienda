@@ -9,10 +9,7 @@ const CartProvider = ({ children }) => {
   const [cartProductos, setCartProductos] = useState([]);
 
   const addProductos = (productos, contador) => {
-    /*  productos.quanty = contador; 
-        let prodLoad = cartProductos.find(cartProducto => cartProducto.id == productos.id)   
-        !prodLoad && setCartProductos(cartProductos => [...cartProductos, productos])   */
-
+  
     productos.quanty = contador;
     if (cartProductos.find((el) => el.id === productos.id)) {
       let index = cartProductos.findIndex((el) => el.id === productos.id);
