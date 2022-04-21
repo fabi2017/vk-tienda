@@ -1,4 +1,3 @@
-
 import UnderConstruction from "../extra/UnderConstruction"
 
 function Contacto() {
@@ -7,9 +6,6 @@ function Contacto() {
        <h1 className="tituloList">Contactenos</h1>
        <UnderConstruction/>
       </>
-
     )
 }
-
-
 export default Contacto

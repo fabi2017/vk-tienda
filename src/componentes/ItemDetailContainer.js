@@ -1,13 +1,20 @@
 import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+//COMPONENTES
 import CircularProgress from "@mui/material/CircularProgress";
 import ItemDetail from "./ItemDetail";
-import { useParams } from "react-router-dom";
+//
 import { doc, getDoc } from "firebase/firestore";
 import db from "../firebase";
 
 function ItemDetailContainer() {
   const { id } = useParams();
   const [productos, setProductos] = useState(null);
+  const navigate = useNavigate()   
+
+  const page404 = () =>{
+    navigate(`*`)
+}
 
   const getProduct = async () => {
     const docRef = doc(db, "dbProductos", id);
@@ -20,12 +27,13 @@ function ItemDetailContainer() {
       setProductos(product);
     } else {
       console.log("No such document!");
+      page404()
     }
   };
-
   useEffect(() => {
     getProduct();
   }, [id]);
+
 
   return (
     <div className="containerItem">

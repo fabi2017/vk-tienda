@@ -1,7 +1,6 @@
-
 import UnderConstruction from "../extra/UnderConstruction"
-function Nosotros() {
 
+function Nosotros() {
     return(
         <>
         <h1 className="tituloList">Sobre nosotros</h1>    

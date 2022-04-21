@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+//COMPONENTES
 import CircularProgress from "@mui/material/CircularProgress";
 import Items from "./Items";
-import { useParams } from "react-router-dom";
+//
 import db from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 

@@ -7,54 +7,48 @@ const CartContext = createContext();
 const CartProvider = ({ children }) => {
   //se crea estados para el tema
   const [cartProductos, setCartProductos] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0)
 
-  const addProductos = (productos, contador) => {
-  
-    productos.quanty = contador;
+  const addProductos = (productos, contador) => {  
+    productos.quanty = contador;  
+
     if (cartProductos.find((el) => el.id === productos.id)) {
       let index = cartProductos.findIndex((el) => el.id === productos.id);
       let producto = cartProductos[index];
-      producto.quanty = producto.quanty + contador;
+      producto.quanty = producto.quanty + contador;   
 
       const nuevoCarrito = [...cartProductos];
       nuevoCarrito.splice(index, 1, producto);
       setCartProductos([...nuevoCarrito]);
-
-    } else {
+      setTotalPrice(precioTotal())     
+    } 
+    else {      
       let producto = { ...productos, contador };
+      let  subtotal = productos.precio * productos.quanty
       setCartProductos((cartProductos) => [...cartProductos, producto]);
+      setTotalPrice(precioTotal() + subtotal )      
     }
 
   };
 
   const eliminarProd = (id) => {
     setCartProductos(cartProductos.filter(prod => prod.id !== id))
-  }
-  
+  }  
   const precioTotal = () => {   
-
     return cartProductos.reduce((parcial, producto) => parcial = parcial + (producto.precio * producto.quanty), 0 )
   };
-
-
   const limpiarCart = () =>{
       setCartProductos([])
   }
-
-
-
   // valores a pasar en el contexto
   const data = {
-    cartProductos,
+    cartProductos,  
     addProductos,
     precioTotal,
     limpiarCart,
     eliminarProd,
+    totalPrice,
   };
-
-
-
-
 
   return (
     // funciones que van a ir dentro del componente

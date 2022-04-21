@@ -1,67 +1,51 @@
+.containerCart {
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
+  margin: 40px 50px;
+}
 
+.infoItem2 {
+  margin: 0 10px;
+}
 
+.contCompra {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px;
+}
 
-.containerCart{
-    box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
-   margin: 40px 50px;
-   
-  }
+.contCompra > p > span {
+  font-weight: bold;
+}
 
-  .itemCart{
- 
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 20px 0;
-    box-shadow: 0 0 2px 0 rgb(0 0 0 / 50%);
-  } 
+.contVacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-
-  .itemCart>span>p{
-    font-weight: bold;
-  }
-  
-  .imagenItem2{  
-    height: 150px;
-    margin: 0 10px;
-  }
-  
-  
-  .imagenItem2>img{
-    width: 90%;
-    height: 90%;
-    object-fit: scale-down;
-  }
-
-  .infoItem2{   
-    margin: 0 10px;   
- }
-  
-
-  .contCantidad{
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contCompra{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 5px;
-  }
-
-  .contCompra>p>span{
-    font-weight: bold;
-  }
-
-  .contVacio{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-.btnChange{
+.btnChange {
   margin: 0;
   padding: 0;
-}  
+}
+
+.ordenCompra {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.ordenCompra > p > span {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.ordenTitle {
+  font-size: 0.8rem;
+  background-color: rgba(245, 175, 175, 0.208);
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px;
+  box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.3);
+}

@@ -1,17 +1,18 @@
 import "./App.css";
-import NavBar from "./componentes/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+//SECCIONES
 import Nosotros from "./secciones/Nosotros";
 import Contacto from "./secciones/Contacto";
 import Home from "./secciones/Home";
+import Carrito from "./secciones/Carrito";
+import Page404 from "./extra/Page404"
+//COMPONENTES
 import ItemListContainer from "./componentes/ItemListContainer";
 import ItemDetailContainer from "./componentes/ItemDetailContainer";
-import Carrito from "./secciones/Carrito";
+import NavBar from "./componentes/NavBar";
+//
 import { ThemeProvider } from "./context/ThemeContext";
 import { CartProvider } from "./context/CartContext"
-import Page404 from "./extra/Page404"
-
-
 
 function App() {
   return (

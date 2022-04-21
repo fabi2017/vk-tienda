@@ -1,11 +1,10 @@
-
 import "../estilos/ItemDetails.css"
-import ItemCount from "./ItemCount";
 import { useState, useContext } from "react";
-import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
+//COMPONENTES
+import Button from '@mui/material/Button';
+import ItemCount from "./ItemCount";
 import CartContext from  '../context/CartContext';
-
 
 function ItemDetail({data}) {
   

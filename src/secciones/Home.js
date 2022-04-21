@@ -1,6 +1,4 @@
-
 import ItemListContainer from "../componentes/ItemListContainer"
-
 
 function Home() {
     return(

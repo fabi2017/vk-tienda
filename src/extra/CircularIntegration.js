@@ -1,5 +1,7 @@
 import "../estilos/Carrito.css"
 import * as React from 'react';
+import { useContext } from "react";
+//COMPONENTES
 import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
 import { green, red  } from '@mui/material/colors';
@@ -7,8 +9,9 @@ import Button from '@mui/material/Button';
 import Fab from '@mui/material/Fab';
 import CheckIcon from '@mui/icons-material/Check';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+//
 import CartContext from "../context/CartContext";
-import { useContext } from "react";
+
 
 
 export default function CircularIntegration() {
@@ -20,9 +23,9 @@ export default function CircularIntegration() {
 
   const buttonSx = {
     ...(success && {
-      bgcolor: red[400],
+      bgcolor: green[400],
       '&:hover': {
-        bgcolor: red[700],
+        bgcolor: green[700],
       
       },
     }),

@@ -1,7 +1,4 @@
-
-
 import ItemListContainer from "../componentes/ItemListContainer"
-
 
 function Productos() {
     return(
