@@ -1,7 +1,15 @@
 .containerCart {
   box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
   margin: 40px 50px;
+  padding-top: 5px;
+  background-color: white;
+  border-radius: 10px;
 }
+
+.containerCart.dark-mode{
+  background-color: #1f1f1f;
+}
+
 
 .infoItem2 {
   margin: 0 10px;
@@ -14,6 +22,11 @@
   padding: 5px;
 }
 
+
+.contCompra.dark-mode * {
+ color: whitesmoke;
+}
+
 .contCompra > p > span {
   font-weight: bold;
 }
@@ -22,6 +35,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.contVacio.dark-mode * {
+  color: whitesmoke;
 }
 
 .btnChange {

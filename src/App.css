@@ -13,18 +13,35 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 10px;
+  background-color:#f5f5f5;
+  border-radius: 10px;
 }
+
+.containerProd.dark-mode  {
+  background-color: #1f1f1f;
+}
+
+
 
 .containerItem {
   box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
-  margin: 50px;
+  margin: 80px 50px ;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding: 10px;
+  background-color:white;
+  border-radius: 10px;
 }
+
+.containerItem.dark-mode  {
+  background-color: #1f1f1f;
+}
+
+
+
 
 .linkMenu {
   text-decoration: none;
@@ -34,19 +51,16 @@
 .tituloList {
   text-align: center;
   text-decoration: underline;
+  color: whitesmoke;
 }
 
 .subtitulo {
   text-align: center;
   font-style: italic;
   font-weight: 400;
+  color: whitesmoke;
 }
 
-.contConstruction {
-  margin-top: 200px;
-  display: flex;
-  justify-content: center;
-}
 
 .contError {
   margin: 20px 40px;
@@ -59,4 +73,22 @@
 
 .imgError {
   height: 450px;
+}
+
+
+.contAccordion{
+  margin: 30px 100px;
+  border-radius: 10px;
+  
+}
+
+ .css-o4b71y-MuiAccordionSummary-content.Mui-expanded{
+  margin:0; 
+  
+}
+
+#accordionDark * {
+  background-color: #1f1f1f;
+  color: white;
+  
 }

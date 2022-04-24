@@ -15,7 +15,7 @@ function Items({ datProd }) {
   }
   
   return (
-    <div className="cardProd">
+    <div className={`cardProd  ${darkTheme ? 'dark-mode' : '' }`} >
       <div className="imagenProd">
         <img src={`../${imagen}`} alt="" />
       </div>      

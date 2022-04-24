@@ -10,6 +10,7 @@ import Page404 from "./extra/Page404"
 import ItemListContainer from "./componentes/ItemListContainer";
 import ItemDetailContainer from "./componentes/ItemDetailContainer";
 import NavBar from "./componentes/NavBar";
+import Footer from "./componentes/Footer";
 //
 import { ThemeProvider } from "./context/ThemeContext";
 import { CartProvider } from "./context/CartContext"
@@ -20,7 +21,7 @@ function App() {
       <CartProvider>
         <ThemeProvider>
           <BrowserRouter>
-            <NavBar />
+            <NavBar />          
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/categoria/:categoria"
@@ -30,10 +31,11 @@ function App() {
               <Route path="/contacto" element={<Contacto />} />
               <Route path="/cart" element={<Carrito />} />
               <Route path="*"element={<Page404/>} />
-            </Routes>
+            </Routes>   
+             <Footer/>         
           </BrowserRouter>
         </ThemeProvider>
-      </CartProvider>
+      </CartProvider>      
     </div>
   );
 }

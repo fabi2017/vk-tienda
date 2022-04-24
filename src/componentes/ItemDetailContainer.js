@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useContext } from 'react';
+import ThemeContext from '../context/ThemeContext';
 //COMPONENTES
 import CircularProgress from "@mui/material/CircularProgress";
 import ItemDetail from "./ItemDetail";
@@ -10,7 +12,8 @@ import db from "../firebase";
 function ItemDetailContainer() {
   const { id } = useParams();
   const [productos, setProductos] = useState(null);
-  const navigate = useNavigate()   
+  const navigate = useNavigate()  
+  const { darkTheme} = useContext(ThemeContext) 
 
   const page404 = () =>{
     navigate(`*`)
@@ -36,11 +39,11 @@ function ItemDetailContainer() {
 
 
   return (
-    <div className="containerItem">
+    <div className={`containerItem  ${darkTheme ? 'dark-mode' : '' }`}>
       {productos ? (
         <ItemDetail data={productos} key={productos.id} />
       ) : (
-        <CircularProgress color="secondary" />
+        <CircularProgress color="success" />
       )}
     </div>
   );

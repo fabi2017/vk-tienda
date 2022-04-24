@@ -1,14 +1,13 @@
-import UnderConstruction from "../extra/UnderConstruction"
-
+import UnderConstruction from "../extra/UnderConstruction";
+import SimpleAccordion from "../extra/Accordion";
+import "../App.css"
 function Nosotros() {
-    return(
-        <>
-        <h1 className="tituloList">Sobre nosotros</h1>    
-        <UnderConstruction/>
-        </>
-     
-    )
+  return (
+    <>
+      <h1 className="tituloList">Sobre nosotros</h1>    
+      <SimpleAccordion />    
+    </>
+  );
 }
 
-
-export default Nosotros
+export default Nosotros;

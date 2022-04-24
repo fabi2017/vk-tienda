@@ -4,7 +4,7 @@
   padding: 5px 30px;
   display: flex;
   justify-content: space-between;
-  background-color: whitesmoke;
+  background-color: #f5f5f5
 }
 .App-header.dark-mode {
   background-color: #1f1f1f;

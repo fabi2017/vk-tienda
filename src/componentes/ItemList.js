@@ -44,7 +44,7 @@ function ItemList() {
       return <Items datProd={producto} key={producto.id} />;
     })
   ) : (
-    <CircularProgress color="inherit" />
+    <CircularProgress color="secondary" />
   );
 }
 

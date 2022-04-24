@@ -7,9 +7,14 @@
   padding: 0px;
 }
 
+.cardProd.dark-mode {
+  border: aqua 2px solid;
+}
+
 .imagenProd {
   height: 200px;
   box-shadow: 0 0 4px 0 rgb(0 0 0 / 50%);
+background-color: white;
 }
 
 .imagenProd > img {
@@ -30,5 +35,5 @@
 }
 
 .infoProd.dark-mode * {
-  color: aliceblue;
+  color: whitesmoke;
 }

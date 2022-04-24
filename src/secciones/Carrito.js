@@ -14,6 +14,7 @@ import CartItem from "../componentes/CartItem";
 import { addDoc, collection } from 'firebase/firestore';
 import db from '../firebase'
 import CartContext from "../context/CartContext";
+import ThemeContext from '../context/ThemeContext';
 
 
 function Carrito() {
@@ -21,6 +22,7 @@ function Carrito() {
   const navigate = useNavigate()   
   const [ordenGenerada, setOrdenGenerada] = useState()
   const [openModal, setOpenModal] = useState(false)
+  const { darkTheme} = useContext(ThemeContext)
 
   const [formData, setFormData] = useState({
     nombre: "",
@@ -73,13 +75,13 @@ function Carrito() {
 
 
  return (
-   <div className="containerCart">
+   <div className={`containerCart ${darkTheme ? 'dark-mode' : '' }`}>
      {cartProductos.map((item) => {
        return <CartItem dataProd={item} key={item.id} />;
      })}
 
     {cartProductos.length >= 1 ? (
-       <div className="contCompra">
+       <div className={`contCompra ${darkTheme ? 'dark-mode' : '' }`}>
          <p>Total:$ <span>{precioTotal()}</span>{" "}</p>
          <Button sx={{ m: 2, height: 37 }}variant="outlined" color="error"
           onClick={limpiarCart}>Vaciar Carrito</Button>
@@ -100,15 +102,15 @@ function Carrito() {
                 <form onSubmit={handleSubmit}>
                   <TextField autoFocus={true} margin="dense"
                     name="nombre" label="Nombre"type="nombre"
-                    fullWidth variant="outlined"
+                    fullWidth variant="outlined" required
                     onChange={handleChange} value={formData.nombre}/>
                   <TextField margin="dense"
                     name="telefono" label="Telefono" type="telefono"
-                    fullWidth variant="outlined"
+                    fullWidth variant="outlined" required
                     onChange={handleChange} value={formData.telefono}/>
                   <TextField margin="dense"
                     name="mail" label="Email" type="email"
-                    fullWidth variant="outlined"
+                    fullWidth variant="outlined" required
                     onChange={handleChange} value={formData.mail}/>
                   <DialogActions>
                     <Button sx={{ m: 2, p: 1, height: 37 }}variant="outlined"color="error" type="submit">Enviar</Button>
@@ -119,7 +121,7 @@ function Carrito() {
          </FormDialog>
        </div>
      ) : (
-       <div className="contVacio">
+       <div className={`contVacio ${darkTheme ? 'dark-mode' : '' }`}>
          <h3>No hay productos en el carrito</h3>
          <Button sx={{ m: 2, p: 1 }}variant="outlined" size="small"color="error"
            onClick={pageHome}>Volver a inicio</Button>
