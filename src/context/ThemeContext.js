@@ -11,7 +11,7 @@ const ThemeProvider = ({children} ) => {
 
     const cambioTema = () => {
         setDarkTheme(!darkTheme)
-        console.log("funcion del tema dark ")
+      //  console.log("funcion del tema dark ")
     } 
 
     // valores a pasar en el contexto

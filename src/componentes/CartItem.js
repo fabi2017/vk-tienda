@@ -16,7 +16,7 @@ function CartItem({ dataProd }) {
         <div className="imagenItem2">
             <img src={`../${imagen}`} alt="" />
         </div>
-        <h3>{titulo} </h3>               
+        <h4>{titulo} </h4>               
         <span>Precio<p>${precio}</p></span>  
         <p className="contCantidad">Cantidad: {quanty}</p>    
         <span>Subtotal<p>${subtotal}</p></span>                          

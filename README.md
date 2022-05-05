@@ -2,40 +2,34 @@
 
 Este es un proyecto para una tienda de ventas de productos decorativos de películas, serie, animé, etc. Ideal para encontrar regalos en figuras de acción y de colección. Comics y Manga. Juegos de Mesa y Rol,etc.
 
-## Available Scripts
+## Instalacion
 
-In the project directory, you can run:
+$ git clone https://github.com/fabi2017/tienda-vk.git
+$ cd ../ruta/carpeta
+$ npm install
+$ npm start
 
-### `npm start`
+## Dependecias utilizadas 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [Material UI](https://mui.com/): Version 5.5.1
+  `npm install @mui/material @emotion/react @emotion/styled`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* [Firebase](https://firebase.google.com/): Version 9.6.11
+  `npm install firebase`
 
-### `npm test`
+* [React-Bootstrap](https://react-bootstrap.github.io/): Version 2.3.0
+   `npm install react-bootstrap bootstrap`
+  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## gifs
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![UniConverter_20220502210751-min](https://user-images.githubusercontent.com/32752596/166394357-2d30c685-32ee-49e9-833f-3cdd35f38ab5.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![UniConverter_20220502211708-min](https://user-images.githubusercontent.com/32752596/166394515-3b22f939-cddf-4af9-8bd5-5618bd974071.gif)
 
-### `npm run eject`
+![UniConverter_20220502213450-min](https://user-images.githubusercontent.com/32752596/166394628-9244232d-d051-4791-b634-584251aebe42.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 

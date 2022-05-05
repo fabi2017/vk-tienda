@@ -22,7 +22,7 @@ function ItemDetail({data}) {
        setBtnCart(true) 
        setBtnCarrito(false)            
        addProductos(data,contador) 
-       console.log("productos agregados: ", cartProductos)    
+     //  console.log("productos agregados: ", cartProductos)    
    }
 
   const pageCarrito = () =>{
@@ -37,7 +37,7 @@ function ItemDetail({data}) {
       <div className="imagenItem">
         <img src={`../${imagen}`} alt="" />
       </div>
-      <h2>{titulo} </h2>
+      <h4>{titulo} </h4>
       <div className="infoItem">
         <p>Precio:$ {precio} </p>
         <p>Medidas: {tamaño} </p>

@@ -14,21 +14,21 @@ function SimpleAccordion() {
     <div className="contAccordion">
       <Accordion id={`${darkTheme ? 'accordionDark' : '' }`}> 
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <h3>¿Quienes somos?</h3>
+          <h5>¿Quienes somos?</h5>
         </AccordionSummary>
         <AccordionDetails>
-          <p>
+          <Typography>
             Somos una tienda con más de 10 años de experiencia en el rubro. ¡Si
             te gustan los coleccionables y los cómics Tineda-Vk es tu lugar!
             Conseguí todo el merchandising de las principales licencias y mucho
             más… ! Los esperamos todos los días para compartir nuestro mundo y
             pasión con ustedes.
-          </p>
+          </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion id={`${darkTheme ? 'accordionDark' : '' }`}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <h3>¿Cómo hago para comprar?</h3>
+          <h5>¿Cómo hago para comprar?</h5>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -39,7 +39,7 @@ function SimpleAccordion() {
       </Accordion>
       <Accordion id={`${darkTheme ? 'accordionDark' : '' }`}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <h3>¿La compra es confirmada con el envío del formulario?</h3>
+          <h5>¿La compra es confirmada con el envío del formulario?</h5>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -52,7 +52,7 @@ function SimpleAccordion() {
       </Accordion>
       <Accordion id={`${darkTheme ? 'accordionDark' : '' }`}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <h3>¿Puedo retirar mi compra en el local?</h3>
+          <h5>¿Puedo retirar mi compra en el local?</h5>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -64,7 +64,7 @@ function SimpleAccordion() {
       </Accordion>
       <Accordion id={`${darkTheme ? 'accordionDark' : '' }`}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <h3>¿Qué opciones tengo para pagar?</h3>
+          <h5>¿Qué opciones tengo para pagar?</h5>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -75,7 +75,7 @@ function SimpleAccordion() {
       </Accordion>
       <Accordion id={`${darkTheme ? 'accordionDark' : '' }`}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <h3>¿Se puede cancelar un pedido?</h3>
+          <h5>¿Se puede cancelar un pedido?</h5>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -88,7 +88,7 @@ function SimpleAccordion() {
       </Accordion>
       <Accordion id={`${darkTheme ? 'accordionDark' : '' }`}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <h3>¿Como realizar un cambio?</h3>
+          <h5>¿Como realizar un cambio?</h5>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

@@ -24,12 +24,12 @@ function ItemDetailContainer() {
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
-      console.log("Document data:", docSnap.data());
+    //  console.log("Document data:", docSnap.data());
       let product = docSnap.data();
       product.id = docSnap.id;
       setProductos(product);
     } else {
-      console.log("No such document!");
+    //  console.log("No such document!");
       page404()
     }
   };

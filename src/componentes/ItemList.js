@@ -33,7 +33,7 @@ function ItemList() {
   const productoByCategoria = (categoria, array) => {
     return array.map((producto) => {
       if (producto.categoria === categoria) {
-        console.log("map de: ", productos);
+       // console.log("map de: ", productos);
         return setProductos((productos) => [...productos, producto]);
       }
     });

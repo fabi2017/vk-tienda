@@ -18,7 +18,7 @@
 }
 
 .containerProd.dark-mode  {
-  background-color: #1f1f1f;
+  background-color: #1d1d1d;
 }
 
 
@@ -37,7 +37,7 @@
 }
 
 .containerItem.dark-mode  {
-  background-color: #1f1f1f;
+  background-color: #1d1d1d;
 }
 
 
@@ -52,6 +52,7 @@
   text-align: center;
   text-decoration: underline;
   color: whitesmoke;
+  margin-top: 10px;
 }
 
 .subtitulo {
@@ -89,29 +90,8 @@
 }
 
 #accordionDark * {
-  background-color: #1f1f1f;
+  background-color: #1d1d1d;
   color: white;
   
 }
 
-
-/*--------*/
-
-.contSlider{  
-  margin: 30px 50px;
-  background-color: white;
-  border-radius: 10px;  
-}
-
-.slider{
-  height: 60vh;
-}
-
-.imgSlide{ 
- margin: 0 40px;
- width: 100%;
- height: 100%;
-  object-fit: contain;
-  padding: 10px;
-  border-radius: 20px;
-}

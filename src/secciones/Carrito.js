@@ -63,11 +63,11 @@ function Carrito() {
   const pushOrden = async (prevOrden) => {
     const ordenFirebase = collection(db, "ordenesCompra");
     const ordenDoc = await addDoc(ordenFirebase, prevOrden);
-    console.log("orden generada: ", ordenDoc.id);
+   // console.log("orden generada: ", ordenDoc.id);
     setOrdenGenerada(ordenDoc.id);
   };
 
-  console.log("orden ", orden);
+ // console.log("orden ", orden);
 
   const pageHome = () => {
     navigate(`/`);
@@ -82,44 +82,44 @@ function Carrito() {
 
     {cartProductos.length >= 1 ? (
        <div className={`contCompra ${darkTheme ? 'dark-mode' : '' }`}>
-         <p>Total:$ <span>{precioTotal()}</span>{" "}</p>
-         <Button sx={{ m: 2, height: 37 }}variant="outlined" color="error"
-          onClick={limpiarCart}>Vaciar Carrito</Button>
-         <Button  sx={{ m: 2, height: 37 }} variant="outlined" color="error"
-           onClick={() => setOpenModal(true)}>Comprar</Button>
+            <p>Total:$ <span>{precioTotal()}</span>{" "}</p>
+            <Button sx={{ m: 2, height: 37 }}variant="outlined" color="error"
+              onClick={limpiarCart}>Vaciar Carrito</Button>
+            <Button  sx={{ m: 2, height: 37 }} variant="outlined" color="error"
+              onClick={() => setOpenModal(true)}>Comprar</Button>
 
-         <FormDialog handleClose={() => setOpenModal(false)} open={openModal}>
-            {ordenGenerada ?
-             (<div className="ordenCompra">
-                <p className="ordenTitle">Orden generada: {ordenGenerada}</p>
-                <p>Su codigo de compra es:<span>{ordenGenerada.slice(-5)}</span></p>
-                <CircularIntegration />
-              </div>
-            )            
-            :            
-            ( <>
-                <DialogTitle>Orden de Compra</DialogTitle>
-                <form onSubmit={handleSubmit}>
-                  <TextField autoFocus={true} margin="dense"
-                    name="nombre" label="Nombre"type="nombre"
-                    fullWidth variant="outlined" required
-                    onChange={handleChange} value={formData.nombre}/>
-                  <TextField margin="dense"
-                    name="telefono" label="Telefono" type="telefono"
-                    fullWidth variant="outlined" required
-                    onChange={handleChange} value={formData.telefono}/>
-                  <TextField margin="dense"
-                    name="mail" label="Email" type="email"
-                    fullWidth variant="outlined" required
-                    onChange={handleChange} value={formData.mail}/>
-                  <DialogActions>
-                    <Button sx={{ m: 2, p: 1, height: 37 }}variant="outlined"color="error" type="submit">Enviar</Button>
-                  </DialogActions>
-                </form>
-              </>)
-             }
-         </FormDialog>
-       </div>
+            <FormDialog handleClose={() => setOpenModal(false)} open={openModal}>
+                {ordenGenerada ?
+                (<div className="ordenCompra">
+                    <p className="ordenTitle">Orden generada: {ordenGenerada}</p>
+                    <p>Su codigo de compra es:<span>{ordenGenerada.slice(-5)}</span></p>
+                    <CircularIntegration />
+                  </div>
+                )            
+                :            
+                ( <>
+                    <DialogTitle>Orden de Compra</DialogTitle>
+                    <form onSubmit={handleSubmit}>
+                      <TextField autoFocus={true} margin="dense"
+                        name="nombre" label="Nombre"type="nombre"
+                        fullWidth variant="outlined" required
+                        onChange={handleChange} value={formData.nombre}/>
+                      <TextField margin="dense"
+                        name="telefono" label="Telefono" type="telefono"
+                        fullWidth variant="outlined" required
+                        onChange={handleChange} value={formData.telefono}/>
+                      <TextField margin="dense"
+                        name="mail" label="Email" type="email"
+                        fullWidth variant="outlined" required
+                        onChange={handleChange} value={formData.mail}/>
+                      <DialogActions>
+                        <Button sx={{ m: 2, p: 1, height: 37 }}variant="outlined"color="error" type="submit">Enviar</Button>
+                      </DialogActions>
+                    </form>
+                  </>)
+                }
+            </FormDialog>
+        </div>
      ) : (
        <div className={`contVacio ${darkTheme ? 'dark-mode' : '' }`}>
          <h3>No hay productos en el carrito</h3>
