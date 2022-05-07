@@ -39,12 +39,14 @@ function ItemDetailContainer() {
 
 
   return (
+    <div className="contItem">
     <div className={`containerItem  ${darkTheme ? 'dark-mode' : '' }`}>
       {productos ? (
         <ItemDetail data={productos} key={productos.id} />
       ) : (
         <CircularProgress color="success" />
       )}
+    </div>
     </div>
   );
 }

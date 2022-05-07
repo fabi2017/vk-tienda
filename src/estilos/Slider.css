@@ -1,11 +1,12 @@
 .contSlider{  
   margin: 30px 50px;
   background-color: white;
-  border-radius: 10px;  
+  border-radius: 10px; 
+   
 }
 
 .slider{
-  height: 60vh;
+  height: 45vh;
 }
 
 .imgSlide{ 

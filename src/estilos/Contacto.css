@@ -1,13 +1,18 @@
+
+.contContacto { 
+  margin: 70px 0 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
 .containerContacto{
-    box-shadow: 0 0 10px 0 rgb(252 62 62 / 53%);
-    padding: 5px 10px;
+    box-shadow: 0 0 10px 0 rgb(252 62 62 / 53%);    
     background-color:whitesmoke;  
-    border-radius: 10px; 
-    max-width: 768px;
-    margin: 40px auto;
-    position: relative;
-    
-  
+    border-radius: 10px;   
+    margin-top: 10px;
   }
 
   .containerContacto.dark-mode{  
@@ -21,9 +26,13 @@
   }
   
   .containerContacto>form{
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 800px;
+    padding: 10px;
+    
   
   }
   

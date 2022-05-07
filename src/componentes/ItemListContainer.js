@@ -8,9 +8,12 @@ function ItemListContainer (){
 
 
     return(        
-        <div className ={`containerProd  ${darkTheme ? 'dark-mode' : '' }`}>
-         <ItemList/>        
+        <div className="contLista">
+            <div className ={`containerProd  ${darkTheme ? 'dark-mode' : '' }`}>
+                 <ItemList/>        
+            </div>
         </div>
+        
     )    
 }
 
