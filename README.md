@@ -28,11 +28,15 @@ Este es un proyecto para una tienda de ventas de productos decorativos de pelíc
 ![UniConverter_20220502210751-min](https://user-images.githubusercontent.com/32752596/166394357-2d30c685-32ee-49e9-833f-3cdd35f38ab5.gif)
 
 
-* Seleccion de producto
+
+
+* Seleccion de producto:
 ![UniConverter_20220502211708-min](https://user-images.githubusercontent.com/32752596/166394515-3b22f939-cddf-4af9-8bd5-5618bd974071.gif)
 
 
-* Finalizacion de compra
+
+
+* Finalizacion de compra:
 ![UniConverter_20220502213450-min](https://user-images.githubusercontent.com/32752596/166394628-9244232d-d051-4791-b634-584251aebe42.gif)
 
 
