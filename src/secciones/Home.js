@@ -1,13 +1,14 @@
 import ItemListContainer from "../componentes/ItemListContainer";
 import Slider from "../extra/Slider"
-
+import VideoHero from "../extra/VideoHero";
 
 function Home() {
   return (
     <div>     
-      <Slider/>
+      <VideoHero/>          
       <h2 className="tituloList">Productos Destacados</h2>
       <ItemListContainer />
+      <Slider/> 
     </div>
   );
 }

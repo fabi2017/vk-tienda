@@ -1,3 +1,6 @@
+@import url('http://fonts.cdnfonts.com/css/phoenix-gaming');
+
+
 .itemCart {
   text-align: center;
   display: flex;
@@ -33,6 +36,9 @@
 .contCantidad {
   display: flex;
   flex-direction: column;
+  font-family: 'Phoenix Gaming', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
 }
 
 .btnEliminar {

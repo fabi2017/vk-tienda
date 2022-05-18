@@ -1,20 +1,15 @@
-import ItemList from "./ItemList"
-import { useContext } from 'react';
-import ThemeContext from '../context/ThemeContext';
+import ItemList from "./ItemList";
+import { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
 
-function ItemListContainer (){
+function ItemListContainer() {
+  const { darkTheme } = useContext(ThemeContext);
 
-    const { darkTheme} = useContext(ThemeContext)
-
-
-    return(        
-        <div className="contLista">
-            <div className ={`containerProd  ${darkTheme ? 'dark-mode' : '' }`}>
-                 <ItemList/>        
-            </div>
-        </div>
-        
-    )    
+  return (
+    <div className={`containerProd  ${darkTheme ? "dark-mode" : ""}`}>
+      <ItemList />
+    </div>
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;

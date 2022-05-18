@@ -1,3 +1,7 @@
+@import url('http://fonts.cdnfonts.com/css/heroes-assemble');
+
+
+
 .App-header {
   box-shadow: 3px 15px 19px -13px rgb(0 0 0 / 20%);
   box-sizing: border-box;
@@ -15,23 +19,20 @@
   display: flex;
   align-items: flex-end;
   margin-right: 50px;
-  
-}
 
-.navBar > li > Button {
-  margin-left: 15px;
-}
-.btnNavBar {
-  text-decoration: none;
   
 }
 
 .btnNavBar.dark-mode {
-  color: white;
+  color: whitesmoke;
 }
 
 .navBar > Button {
   margin-left: 15px;
+  font-family: 'Heroes Assemble', sans-serif;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  text-decoration: none;
 }
 
 .basic-button.dark-mode {
@@ -41,8 +42,16 @@
 #basic-button > a {
   color: rgb(3, 217, 217);
   text-decoration: none;
+  font-family: 'Heroes Assemble', sans-serif;
+  font-size: 1rem;
 }
 
 .imgLogo {
   width: 120px;
+}
+
+.linkMenu{
+  font-family: 'Heroes Assemble', sans-serif;
+  letter-spacing: 2px;
+  font-size: 1rem;
 }

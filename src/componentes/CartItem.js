@@ -16,10 +16,10 @@ function CartItem({ dataProd }) {
         <div className="imagenItem2">
             <img src={`../${imagen}`} alt="" />
         </div>
-        <h4>{titulo} </h4>               
-        <span>Precio<p>${precio}</p></span>  
+        <h4 className="txtTitulo">{titulo} </h4>               
+        <p className="txtPrecio">${precio}</p>  
         <p className="contCantidad">Cantidad: {quanty}</p>    
-        <span>Subtotal<p>${subtotal}</p></span>                          
+        <p className="txtPrecio">${subtotal}</p>                         
         <button className={`btnEliminar ${darkTheme ? 'dark-mode' : '' }`} onClick={()=> eliminarProd(id)} ><DeleteForeverIcon /></button>                  
     </div>
   );

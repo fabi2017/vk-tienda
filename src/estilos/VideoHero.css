@@ -1,0 +1,29 @@
+.fondo {
+  background: black;
+  color: white;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 40px 250px;
+  box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
+}
+
+.contVideo {
+  position: relative;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto {
+  background: black;
+  text-align: center;
+  font-size: 15rem;
+  font-family: "Heroes Assemble Expanded Italic", sans-serif;
+  mix-blend-mode: multiply;
+}

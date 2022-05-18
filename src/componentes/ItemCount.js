@@ -29,8 +29,8 @@ function ItemCount({ stock, initial,action,btnAdd}) {
             <AddCircleTwoToneIcon sx={{ fontSize: 30 }}/>
           </button>
       </div>  
-      <div> 
-       <Button sx={{ m: 2}} variant="outlined" size="small" color="error" disabled={btnAdd} onClick={(e) => action(e, contador)}>Agregar al carrito</Button>     
+      <div className="contAdd"> 
+       <Button  className="btnStyle2" sx={{ m: 2}} variant="outlined" size="small" color="error" disabled={btnAdd} onClick={(e) => action(e, contador)}>Agregar al carrito</Button>     
      </div>
     </>
   );

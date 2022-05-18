@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/heroes-assemble');
+
 
 
 .cardProd {
@@ -39,4 +41,11 @@
 
 .infoProd.dark-mode * {
   color: whitesmoke;
+}
+
+
+.infoProd>Button{ 
+  font-family: 'Heroes Assemble', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
 }

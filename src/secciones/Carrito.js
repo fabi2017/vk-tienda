@@ -82,7 +82,7 @@ function Carrito() {
 
     {cartProductos.length >= 1 ? (
        <div className={`contCompra ${darkTheme ? 'dark-mode' : '' }`}>
-            <p>Total:$ <span>{precioTotal()}</span>{" "}</p>
+            <p>Total: $ <span>{precioTotal()}</span>{" "}</p>
             <Button sx={{ m: 2, height: 37 }}variant="outlined" color="error"
               onClick={limpiarCart}>Vaciar Carrito</Button>
             <Button  sx={{ m: 2, height: 37 }} variant="outlined" color="error"

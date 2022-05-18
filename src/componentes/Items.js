@@ -20,8 +20,8 @@ function Items({ datProd }) {
         <img src={`../${imagen}`} alt="" />
       </div>      
       <div className={`infoProd  ${darkTheme ? 'dark-mode' : '' }`} >     
-        <h5>{titulo} </h5>
-        <p>Precio:$ {precio} </p>
+        <h4 className="txtTitulo">{titulo} </h4>
+        <p className="txtPrecio">$ {precio} </p>
         <Button variant="outlined" size="small" color="error" onClick={verMas}>Ver mas</Button>        
       </div>   
     </div>

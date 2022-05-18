@@ -1,12 +1,18 @@
+@import url('http://fonts.cdnfonts.com/css/heroes-assemble');
+
+@import url('http://fonts.cdnfonts.com/css/phoenix-gaming');
+
 .app {
   box-sizing: border-box;
   overflow: hidden;
 }
+
+
 /*--------------------------------*/
 .containerProd {
   box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
   display: flex;
-  margin: 0 80px;
+  margin: 50px 80px;
   justify-content: center;
   flex-wrap: wrap;
   padding: 10px;
@@ -21,7 +27,7 @@
 .containerItem {
   box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
   display: flex;
-  margin: 80px;
+  margin:  80px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -44,36 +50,34 @@
   text-decoration: underline;
   color: whitesmoke;
   margin-top: 10px;
-}
-
-.subtitulo {
-  text-align: center;
-  font-style: italic;
-  font-weight: 400;
-  color: whitesmoke;
+  font-family: 'Heroes Assemble', sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
 }
 
 .contError {
   margin: 20px 40px;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 0 5px 0 rgb(241 12 12 / 20%);
+  background-color: white;
 }
 
 .imgError {
-  height: 450px;
+  width: 580px;
 }
 
 /*---------Nosotros----------*/
 .contAccordion {
   border-radius: 10px;
   margin: 20px 100px;
+  font-family: 'Heroes Assemble', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
 }
 
 .css-o4b71y-MuiAccordionSummary-content.Mui-expanded {
   margin: 0;
+  
 }
 
 #accordionDark * {
@@ -91,7 +95,7 @@
 }
 
 .contLista {
-  margin: 90px 0;
+  margin: 50px 0;
   display: flex;
   justify-content: center;
 }
@@ -100,4 +104,19 @@
   margin: 60px 0;
   display: flex;
   justify-content: center;
+}
+
+
+
+/*---------------------*/
+.txtPrecio { 
+  font-family: 'Phoenix Gaming', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+}
+
+.txtTitulo { 
+  font-family: 'Phoenix Gaming', sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
 }

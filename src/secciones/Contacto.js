@@ -5,7 +5,7 @@ function Contacto() {
   return (
     <div className="contContacto">
       <h2 className="tituloList">Contactenos</h2>
-      <FormContacto />
+     <FormContacto/>      
     </div>
   );
 }

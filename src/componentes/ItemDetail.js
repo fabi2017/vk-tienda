@@ -11,7 +11,7 @@ import ThemeContext from '../context/ThemeContext';
 function ItemDetail({data}) {
   const { darkTheme} = useContext(ThemeContext) 
   const { cartProductos,addProductos} = useContext(CartContext)  
-  const {titulo, precio, imagen, descripcion,tamaño,categoria,id} = data; 
+  const {titulo, precio, imagen,imagen2, descripcion,tamaño,categoria,id} = data; 
 
   const [btnAddCart, setBtnCart] = useState(false);
   const [btnCarrito, setBtnCarrito] = useState(true);
@@ -35,13 +35,14 @@ function ItemDetail({data}) {
   return (
     <div className={`itemProd  ${darkTheme ? 'dark-mode' : '' }`}>
       <div className="imagenItem">
-        <img src={`../${imagen}`} alt="" />
+        <img src={`../${imagen2}`} alt="" />
+        <img className="top" src={`../${imagen}`} alt="" />
       </div>
-      <h4>{titulo} </h4>
+      <h4 className="txtTitulo">{titulo} </h4>
       <div className="infoItem">
-        <p>Precio:$ {precio} </p>
-        <p>Medidas: {tamaño} </p>
-        <p>{descripcion}</p> 
+        <p className="txtPrecio">$ {precio} </p>
+        <p className="txtDetail">Medidas: {tamaño} </p>
+        <p className="txtDetail">{descripcion}</p> 
       </div>
       <div className="infoItem2">
         <ItemCount stock={data.stock} initial="1" action={onAdd} btnAdd={btnAddCart}/>    

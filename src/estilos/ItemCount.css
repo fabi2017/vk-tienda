@@ -1,4 +1,6 @@
 
+@import url('http://fonts.cdnfonts.com/css/heroes-assemble');
+
 .item-detail{
     display: flex;
     flex-direction: row;
@@ -11,10 +13,19 @@
     border-radius: 10px;
   
   }
+  .item-detail>p{
+    margin-top: 15px;
+  }
   
   .btnProd{
     border-radius: 30px;
     background-color: transparent;
     border: none;
     margin: 0 15px;
+  }
+
+  .contAdd>Button{ 
+    font-family: 'Heroes Assemble', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
   }
