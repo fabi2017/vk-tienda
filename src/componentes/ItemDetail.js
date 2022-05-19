@@ -22,7 +22,7 @@ function ItemDetail({data}) {
        setBtnCart(true) 
        setBtnCarrito(false)            
        addProductos(data,contador) 
-     //  console.log("productos agregados: ", cartProductos)    
+     
    }
 
   const pageCarrito = () =>{
