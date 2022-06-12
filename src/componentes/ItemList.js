@@ -28,8 +28,9 @@ function ItemList() {
       categoria  ? productoByCategoria(categoria, productos)
         : setProductos(productos);
     });
+  
   }, [categoria]);
-
+ 
   const productoByCategoria = (categoria, array) => {
     return array.map((producto) => {
       if (producto.categoria === categoria) {

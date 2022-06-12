@@ -1,57 +1,56 @@
-@import url('http://fonts.cdnfonts.com/css/heroes-assemble');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 .App-header {
   box-shadow: 3px 15px 19px -13px rgb(0 0 0 / 20%);
   box-sizing: border-box;
-  padding: 5px 30px;
-  display: flex;
-  justify-content: space-between;
   background-color: #f5f5f5
 }
-.App-header.dark-mode {
-  background-color: #1d1d1d;
+.App-header.dark-mode  {
+  background-color: #1d1d1d; 
+}
+.navBar {  
+  width: 100%;  
 }
 
-.navBar {
-  list-style: none;
-  display: flex;
-  align-items: flex-end;
-  margin-right: 50px;
-
-  
-}
-
-.btnNavBar.dark-mode {
+.navBar.dark-mode * {
   color: whitesmoke;
 }
+.navbar-light .navbar-toggler {
+  background-color: whitesmoke;
+}
 
-.navBar > Button {
-  margin-left: 15px;
-  font-family: 'Heroes Assemble', sans-serif;
+.me-auto > Button{
+  font-family: 'Bangers', cursive;
+  font-size: 1.3rem;
   letter-spacing: 2px;
-  font-size: 1rem;
-  text-decoration: none;
 }
 
-.basic-button.dark-mode {
-  color: white;
+.contLogo {
+  margin-right: 120px;
 }
 
-#basic-button > a {
-  color: rgb(3, 217, 217);
-  text-decoration: none;
-  font-family: 'Heroes Assemble', sans-serif;
-  font-size: 1rem;
+.logo {
+  padding-bottom: 25px;
+  height: 150px;
 }
 
-.imgLogo {
-  width: 120px;
+#navbar-toggler {
+  background-color: rgb(233 219 255);
+  margin: 10px 0;
 }
+
 
 .linkMenu{
-  font-family: 'Heroes Assemble', sans-serif;
-  letter-spacing: 2px;
-  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  margin: 5px;
+  font-family: 'Bangers', cursive;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 500px){
+  .me-auto > Button{
+    margin-left: 30px;
+  }
+
 }

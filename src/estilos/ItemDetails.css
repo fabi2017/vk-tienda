@@ -1,6 +1,8 @@
-@import url("http://fonts.cdnfonts.com/css/heroes-assemble");
 
-@import url("http://fonts.cdnfonts.com/css/phoenix-gaming");
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
 
 .itemProd {
   text-align: center;
@@ -49,13 +51,49 @@
 }
 
 .infoItem2 > Button {
-  font-family: "Heroes Assemble", sans-serif;
+  font-family: 'Bangers', cursive;
   font-size: 0.9rem;
   letter-spacing: 2px;
 }
 
 .txtDetail {
-  font-family: "Phoenix Gaming", sans-serif;
+  font-family: 'Skranji', cursive;
   font-size: 1.3rem;
   letter-spacing: 1.7px;
+}
+
+@media screen and (max-width: 500px) {
+  .itemProd {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .imagenItem {
+    position: relative;
+    height: 200px;
+    width: 150px;
+    margin: 0px;
+  }
+
+  .infoItem {
+    margin: 5px;
+    border-radius: 20px;
+  }
+
+  .infoItem2 {
+    margin: 5px;
+    font-size: 1rem;
+  }
+
+  .infoItem2 > Button {
+    font-size: 0.7rem;
+    margin: 5px;
+  }
+
+  .txtPrecio, .txtDetail {
+    font-size: 1.1rem;
+    margin: 0;
+  }
 }

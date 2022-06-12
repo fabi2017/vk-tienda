@@ -11,7 +11,7 @@ function VideoHero() {
           loop
           src="../demo.mp4"
         />
-        <p className="texto">Tienda VK</p>
+      <p className="texto">Tienda VK</p> 
       </div>
     </div>
   );

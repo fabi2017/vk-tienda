@@ -14,6 +14,7 @@ import Footer from "./componentes/Footer";
 //
 import { ThemeProvider } from "./context/ThemeContext";
 import { CartProvider } from "./context/CartContext"
+import Slide from 'react-reveal/Slide';
 
 function App() {
   return (
@@ -21,7 +22,10 @@ function App() {
       <CartProvider>
         <ThemeProvider>
           <BrowserRouter>
-            <NavBar />          
+          <Slide top>
+          <NavBar/> 
+          </Slide>
+                     
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/categoria/:categoria"

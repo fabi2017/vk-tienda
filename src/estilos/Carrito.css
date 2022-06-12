@@ -1,6 +1,6 @@
-@import url('http://fonts.cdnfonts.com/css/heroes-assemble');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
-@import url('http://fonts.cdnfonts.com/css/phoenix-gaming');
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
 
 
 .containerCart {
@@ -28,13 +28,13 @@
 }
 
 .contCompra>Button{
-  font-family: 'Heroes Assemble', sans-serif;
+  font-family: 'Bangers', cursive;
   letter-spacing: 2px;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .contCompra>p{
-  font-family: 'Phoenix Gaming', sans-serif;
+  font-family: 'Skranji', cursive;
   font-size: 1.3rem;
   letter-spacing: 4px;
   margin-top: 15px;
@@ -83,4 +83,19 @@
   border-radius: 20px;
   padding: 5px;
   box-shadow: 0px 1px 7px -1px rgba(0, 0, 0, 0.3);
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+  .containerCart {
+    margin: 100px 40px;
+  }
+
+  .contCompra {
+    display: flex;
+    flex-direction: column;
+  }
+
 }

@@ -9,11 +9,28 @@
   height: 30vh;
 }
 
-.imgSlide {
-  margin: 0 40px;
+.imgSlide {  
   width: 100%;
   height: 100%;
   object-fit: contain;
   padding: 10px;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 500px) {
+
+  .contSlider {   
+    margin: 0 50px 100px 50px;
+  }
+  
+  .slider {
+    height: 30vh;
+  }
+  
+  .imgSlide {
+    margin: 0 10px;    
+    width: 90%;
+    height: 90%;
+  }
+
 }

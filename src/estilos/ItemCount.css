@@ -1,5 +1,5 @@
 
-@import url('http://fonts.cdnfonts.com/css/heroes-assemble');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 .item-detail{
     display: flex;
@@ -25,7 +25,22 @@
   }
 
   .contAdd>Button{ 
-    font-family: 'Heroes Assemble', sans-serif;
+    font-family: 'Bangers', cursive;
     font-size: 0.9rem;
     letter-spacing: 2px;
+  }
+
+
+  @media screen and (max-width: 500px) {
+
+    .item-detail{
+      font-size: 0.8rem;
+      margin: 0 10px;
+    }
+
+    .contAdd>Button{ 
+     font-size: 0.7rem;
+     margin: 10px;
+    }
+
   }

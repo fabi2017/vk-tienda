@@ -24,3 +24,18 @@
   }
 
   
+
+
+  @media screen and (max-width: 500px) {
+    .App-footer{
+      height: 15vh;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      
+    }
+
+    .App-footer>p{
+      margin: 0;
+    }
+  }

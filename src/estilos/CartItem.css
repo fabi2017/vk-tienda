@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/phoenix-gaming');
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
 
 
 .itemCart {
@@ -36,7 +36,7 @@
 .contCantidad {
   display: flex;
   flex-direction: column;
-  font-family: 'Phoenix Gaming', sans-serif;
+  font-family: 'Skranji', cursive;
   font-size: 1.2rem;
   letter-spacing: 2px;
 }
@@ -57,4 +57,13 @@
 .btnEliminar.dark-mode:hover {
   box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.32);
   
+}
+
+
+@media screen and (max-width: 500px) {
+  .itemCart {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
 }
