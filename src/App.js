@@ -24,8 +24,7 @@ function App() {
           <BrowserRouter>
           <Slide top>
           <NavBar/> 
-          </Slide>
-                     
+          </Slide>                     
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/categoria/:categoria"
