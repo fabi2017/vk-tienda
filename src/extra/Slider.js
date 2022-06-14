@@ -5,13 +5,13 @@ function Slider() {
   return (
     <Carousel className="contSlider" variant="dark">
       <Carousel.Item className="slider" interval={1200}>
-        <img className="imgSlide" src="../cajita.jpg" alt="First slide" />
+        <img className="imgSlide" src="/cajita.JPG" alt="First slide" />
       </Carousel.Item>
       <Carousel.Item className="slider" interval={1200}>
-        <img className="imgSlide" src="../funkoMando.jpg" alt="Second slide" />
+        <img className="imgSlide" src="/funkoMando.JPG" alt="Second slide" />
       </Carousel.Item>
       <Carousel.Item className="slider" interval={1200}>
-        <img className="imgSlide" src="../mochila.jpg" alt="Third slide" />
+        <img className="imgSlide" src="/mochila.JPG" alt="Third slide" />
       </Carousel.Item>
     </Carousel>
   );
