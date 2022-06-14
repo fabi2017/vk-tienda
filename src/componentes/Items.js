@@ -17,7 +17,7 @@ function Items({ datProd }) {
   return (
     <div className={`cardProd  ${darkTheme ? 'dark-mode' : '' }`} >
       <div className="imagenProd">
-        <img src={`../${imagen}`} alt="" />
+       <img src={`../${imagen}`} alt="" />
       </div>      
       <div className={`infoProd  ${darkTheme ? 'dark-mode' : '' }`} >     
         <h4 className="txtTitulo">{titulo} </h4>
