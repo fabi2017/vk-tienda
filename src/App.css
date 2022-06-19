@@ -124,7 +124,7 @@
 @media screen and (max-width: 500px) {
  
   .containerProd {   
-    margin: 10px 20px 90px 20px;   
+    margin: 30px 20px 120px 20px;   
     padding: 0;
   }
 
@@ -133,12 +133,12 @@
   .containerItem {
     display: flex;
     flex-direction: column;
-    margin: 100px 30px;
+    margin: 50px 30px 120px 30px;
   }
  
   .contAccordion {
     border-radius: 10px;
-    margin: 40px 20px;
+    margin: 40px 20px 60px 20px;
     font-family: 'Skranji', cursive;
     font-size: 1rem;
     letter-spacing: 2px;

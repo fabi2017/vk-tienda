@@ -34,12 +34,12 @@
   @media screen and (max-width: 500px) {
 
     .item-detail{
-      font-size: 0.8rem;
+      font-size: 1rem;
       margin: 0 10px;
     }
 
     .contAdd>Button{ 
-     font-size: 0.7rem;
+     font-size: 1rem;
      margin: 10px;
     }
 
